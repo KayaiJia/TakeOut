@@ -13,8 +13,6 @@ cloud.init()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const db = cloud.database()
-  console.log(event.name)
-  console.log(event.icon)
 
   db.collection('user').where({id:event.openid}).update({
     data:{

@@ -7,6 +7,7 @@ cloud.init()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   let openid = wxContext.OPENID
+  let status=-1
 
   //登录验证
   const res= await cloud.callFunction({
@@ -15,9 +16,27 @@ exports.main = async (event, context) => {
       openid,
     },
   })
-  let successful=res.result.call
+  console.log(res)
+  status=res.result.status
+  //添加数据
+  if(res.result.userData == 0){
+    console.log("新增数据")
+    const resAdd= await cloud.callFunction({
+      name: 'addUser',
+      data:{
+        openid,
+      }
+    })
+    status=resAdd.result.status
+  }
+  else{
+    console.log("已有数据",res.result.userData)
+    status=0
+  }
+
+
   return {
-    successful,
+    status,
     openid,
   }
 }
