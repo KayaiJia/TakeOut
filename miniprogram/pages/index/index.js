@@ -4,21 +4,8 @@ let avatarUrl
 Page({
   onLoad(){
 
-    /*wx.cloud.callFunction({
-      name: 'login',
-    })
-    .then(res =>{
-      console.log("成功",res)
-      openid=res.result.openid
-      console.log(openid)
-      this.setData({
-        openid:res.result.openid
-      })
-    })
-    .catch(res =>{
-      console.log("失败",res)
-    })*/
   },
+  
 //获取用户信息的例子
   up:function(){
     wx.getUserProfile({
@@ -63,6 +50,36 @@ Page({
     })
     .catch(res =>{
       console.log("失败",res)
+    })
+  },
+
+  test:function(){
+    wx.cloud.callFunction({
+      name:'getUserInfo',
+      data:{
+        openid:openid
+      },
+    })
+    .then(res=>{
+      console.log(res)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  },
+  testinput:function(){
+    wx.cloud.callFunction({
+      name:'addAddress',
+      data:{
+        openid:openid,
+        address:"中国",
+      }
+    })
+    .then(res=>{
+      console.log("添加地址成功",res)
+    })
+    .catch(err=>{
+      console.log("添加地址失败",err)
     })
   }
 })

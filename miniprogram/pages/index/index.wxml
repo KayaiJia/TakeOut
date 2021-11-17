@@ -1,3 +1,5 @@
 <text>{{openid}}</text>
 <button bindtap="login">登录</button>
 <button bindtap="up">更新</button>
+<button bindtap="test">测试</button>
+<button bindtap="testinput">测试地址</button>
