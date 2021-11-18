@@ -4,3 +4,4 @@
 <button bindtap="test">测试</button>
 <button bindtap="testinput">测试地址</button>
 <button bindtap="testM">测试商家</button>
+<button bindtap="testR">测试骑手</button>

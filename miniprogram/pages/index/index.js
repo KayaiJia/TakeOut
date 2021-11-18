@@ -95,5 +95,19 @@ Page({
     .catch(err=>{
       console.log("更改商家失败",err)
     })
+  },
+  testR:function(){
+    wx.cloud.callFunction({
+      name: 'changesToRider',
+      data:{
+        openid : openid,
+      }
+    })
+    .then(res=>{
+      console.log("更改骑手成功",res)
+    })
+    .catch(err=>{
+      console.log("更改骑手失败",err)
+    })
   }
 })
