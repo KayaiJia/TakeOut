@@ -61,10 +61,10 @@ Page({
       },
     })
     .then(res=>{
-      console.log(res)
+      console.log("获取成功",res)
     })
     .catch(err=>{
-      console.log(err)
+      console.log("获取失败",err)
     })
   },
   testinput:function(){
@@ -80,6 +80,20 @@ Page({
     })
     .catch(err=>{
       console.log("添加地址失败",err)
+    })
+  },
+  testM:function(){
+    wx.cloud.callFunction({
+      name:'changeForBusinesses',
+      data:{
+        openid:openid,
+      }
+    })
+    .then(res=>{
+      console.log("更改商家成功",res)
+    })
+    .catch(err=>{
+      console.log("更改商家失败",err)
     })
   }
 })

@@ -19,6 +19,7 @@ exports.main = async (event, context) => {
     data: {
       id:event.openid,
       address:[],
+      merchants:0,
     }
   })
   .then(res=>{
