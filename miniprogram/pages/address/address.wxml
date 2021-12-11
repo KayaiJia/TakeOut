@@ -1,0 +1,7 @@
+<!--miniprogram/pages/address/address.wxml-->
+<!-- <text>miniprogram/pages/address/address.wxml</text> -->
+<view wx:if="address">
+  <view wx:for="{{address}}" wx:key>
+    {{item}}
+  </view>
+</view>

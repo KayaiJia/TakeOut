@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "miniprogram/pages/index/index",
+    "miniprogram/pages/dataBase/dataBase",
+    "miniprogram/pages/order/order",
+    "miniprogram/pages/personalCenter/personalCenter",
+    "miniprogram/pages/address/address"
+  ],
+  "window": {
+    "backgroundColor": "#14B9F9",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#14B9F9",
+    "navigationBarTitleText": "外卖小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#BABABA",
+    "selectedColor": "#24C1EB",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "miniprogram/pages/index/index",
+        "text": "首页",
+        "iconPath": "miniprogram/images/tarBar/canyin.png",
+        "selectedIconPath": "miniprogram/images/tarBar/canyin-active.png"
+      },
+      {
+        "pagePath": "miniprogram/pages/order/order",
+        "text": "订单",
+        "iconPath": "miniprogram/images/tarBar/dingdan.png",
+        "selectedIconPath": "miniprogram/images/tarBar/dingdan-active.png"
+      },
+      {
+        "pagePath": "miniprogram/pages/personalCenter/personalCenter",
+        "text": "个人中心",
+        "iconPath": "miniprogram/images/tarBar/geren.png",
+        "selectedIconPath": "miniprogram/images/tarBar/geren-active.png"
+      }
+    ]
+  }
+}

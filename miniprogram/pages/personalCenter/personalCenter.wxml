@@ -1,0 +1,29 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class="padding">
+  <view class="flex  p-xs margin-bottom-sm mb-sm">
+    <image src="{{avatarUrl}}" class="head cu-avatar xl round margin-left" bindtap="login"></image>
+    <div class="nickname flex-treble padding-sm margin-xs radius" bindtap="login">{{nickname}}</div>
+    <button class="changeAcc flex-sub padding-sm margin-xs radius cu-btn round sm" >
+      账户设置
+    </button>
+    </view>
+</view>
+
+<!-- <div class="tool-list">
+  <p>常用工具</p>
+  <div class="tool">
+    <div><div><image src="/miniprogram/images/dizhiguanli.png"></image>我的地址</div></div>
+    <div><div><image src="/miniprogram/images/shouye.png"></image>我的卡包</div></div>
+    <div><div><image src="/miniprogram/images/guanzhu.png"></image></div>店铺关注</div>
+  </div>
+</div> -->
+<view class="padding bg-white"> 
+  <view>常用工具</view>
+  <view class="flex">
+    <view class="vertical tool" wx:for="{{icon}}" wx:key wx:if="{{item.isShow}}">
+      <text class="cuIcon-{{item.name}} flex-sub padding-sm margin-xs radius tool-icon" bindtap="{{item.active}}"></text>
+      <text class="tool-text" bindtap="{{item.active}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
+
