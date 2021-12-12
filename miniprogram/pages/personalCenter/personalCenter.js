@@ -42,7 +42,9 @@ Page({
         query.address[i]=JSON.stringify(query.address[i])
       }
       query.openID=this.data.openID
-      query.address=query.address.join('...')
+      if(query.address){
+        query.address=query.address.join('...')
+      }
       router.gotoPage('/address',query)
     })
     .catch(err=>{
@@ -64,9 +66,13 @@ Page({
       .then(res=> {
         this.setData({
           openID:res.result.openid,
-          nickname:res.result.info[0].name,
-          avatarUrl:res.result.info[0].icon,
         })
+        if (res.result.name){
+          this.setData({
+            nickname:res.result.info[0].name,
+            avatarUrl:res.result.info[0].icon,
+          })
+        }
         // this.data.openID = res.result.openid
         console.log('登入成功',res)
       })

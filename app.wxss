@@ -1,6 +1,7 @@
 /**app.wxss**/
 @import "main.wxss";
 @import "icon.wxss";
+@import "reset.wxss";
 .container {
   display: flex;
   flex-direction: column;

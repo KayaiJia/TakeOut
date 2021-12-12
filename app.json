@@ -4,7 +4,10 @@
     "miniprogram/pages/dataBase/dataBase",
     "miniprogram/pages/order/order",
     "miniprogram/pages/personalCenter/personalCenter",
-    "miniprogram/pages/address/address"
+    "miniprogram/pages/address/address",
+    "miniprogram/pages/address/addAddress/addAddress",
+    "miniprogram/pages/wallet/wallet",
+    "miniprogram/pages/collection/collection"
   ],
   "window": {
     "backgroundColor": "#14B9F9",
