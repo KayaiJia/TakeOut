@@ -1,0 +1,8 @@
+<!--miniprogram/pages/wallet/wallet.wxml-->
+<view class="main">
+  <view class="padding bg-white">
+
+    <view wx:if="{{!address}}">无店铺</view>
+  </view>
+
+</view>

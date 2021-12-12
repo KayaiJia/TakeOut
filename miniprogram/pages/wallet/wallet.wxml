@@ -1,0 +1,12 @@
+<!--miniprogram/pages/wallet/wallet.wxml-->
+<view class="main">
+  <view class="padding bg-white">
+
+    <view wx:if="{{!address}}">无红包</view>
+  </view>
+
+  <view class="padding bg-white button-list">
+    <button class="cu-btn block bg-white margin-tb-sm lg button" bindtap="toGetRedEnvelope">获取红包</button>
+  </view>
+
+</view>

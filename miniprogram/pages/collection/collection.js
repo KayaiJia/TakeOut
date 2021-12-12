@@ -1,45 +1,18 @@
-import router from '../../router/index'
-
-// miniprogram/pages/address/address.js
-const app = getApp();
+// miniprogram/pages/collection/collection.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address:[],
-    CustomBar: app.globalData.CustomBar,
-    TabCur:0,
-    icon:[{ name: 'write', isShow: true }],
-    openID:''
-  },
 
-  addAddress(){
-    let query={openID:this.data.openID}
-    router.gotoPage('/addAddress',query)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      options.address=options.address.split("...")
-      for (let i=0;i<options.address.length;i++){
-        options.address[i]=JSON.parse(options.address[i])
-      }
-     this.setData({
-      address:options.address,
-      openID:options.openID
-     })
-    console.log(this.data.address,this.data.openID)
-  },
-  tabSelect(e) {
-    console.log(e);
-    this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
-    })
+
   },
 
   /**

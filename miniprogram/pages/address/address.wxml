@@ -1,7 +1,25 @@
 <!--miniprogram/pages/address/address.wxml-->
 <!-- <text>miniprogram/pages/address/address.wxml</text> -->
-<view wx:if="address">
+<!-- <view wx:if="address">
   <view wx:for="{{address}}" wx:key>
     {{item}}
   </view>
+</view> -->
+<view class="main">
+  <view class="padding bg-white">
+    <view class="flex  p-xs margin-bottom-sm mb-sm adress-list bg-white" wx:for="{{address}}" wx:key>
+      <view class="flex-treble  padding-sm  radius flex flex-wrap">
+        <view class="basis-xl radius info name">{{item.name}} {{item.phoneNumber}}</view>
+        <view class="basis-xl  radius">{{item.address.detailed}}</view>
+      </view>
+      <view class="flex-sub  margin-xs radius change cuIcon-{{icon[0].name}} lg text-gray"></view>
+    </view>
+
+    <view wx:if="{{!address}}">无地址</view>
+  </view>
+
+  <view class="padding bg-white button-list">
+    <button class="cu-btn block bg-white margin-tb-sm lg button" bindtap="addAddress">新增地址</button>
+  </view>
+
 </view>

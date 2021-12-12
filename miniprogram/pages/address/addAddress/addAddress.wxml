@@ -1,0 +1,28 @@
+<view class="main">
+  <view class="bg-white">
+    <view class="flex solid-bottom padding align-start">
+      <view class="padding-lg margin-xs radius">联系人</view>
+      <input class="radius input name" placeholder="姓名" model:value="{{name}}"></input>
+    </view>
+    <view class="flex solid-bottom padding align-start">
+      <view class="padding-lg margin-xs radius">电话</view>
+      <input class="radius input" model:value="{{phoneNumber}}" placeholder="手机号码" type="number"></input>
+    </view>
+    <view class="flex solid-bottom padding align-center">
+      <view class="padding-lg margin-xs radius">地址</view>
+      <picker class="radius input" mode="region" level="sub-district" bindchange="bindRegionChange">
+        <view wx:if="{{!address.city}}">请选择</view>
+        <view>{{address.provinces}} {{address.city}} {{address.area}}</view>
+      </picker>
+    </view>
+    <view class="flex solid-bottom padding align-center">
+      <view class="padding-lg margin-xs radius">详细地址</view>
+      <input class="radius input" model:value="{{detailed}}" placeholder="详细地址"></input>
+    </view>
+  </view>
+
+  <view class="padding bg-white button-list">
+    <button class="cu-btn block bg-green margin-tb-sm lg button" bindtap="commit">确定</button>
+  </view>
+
+</view>

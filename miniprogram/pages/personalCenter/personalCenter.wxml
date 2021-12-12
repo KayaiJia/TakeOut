@@ -3,9 +3,9 @@
   <view class="flex  p-xs margin-bottom-sm mb-sm">
     <image src="{{avatarUrl}}" class="head cu-avatar xl round margin-left" bindtap="login"></image>
     <div class="nickname flex-treble padding-sm margin-xs radius" bindtap="login">{{nickname}}</div>
-    <button class="changeAcc flex-sub padding-sm margin-xs radius cu-btn round sm" >
+    <!-- <button class="changeAcc flex-sub padding-sm margin-xs radius cu-btn round sm" >
       账户设置
-    </button>
+    </button> -->
     </view>
 </view>
 

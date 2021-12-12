@@ -15,6 +15,12 @@ Page({
           {name:'favorfill',isShow:'true',title:'收藏店铺',active:'queryCollectionStore'}
         ]
   }, 
+  queryCollectionStore(){
+    router.gotoPage('/collection')
+  },
+  queryPurse(){
+    router.gotoPage('/wallet')
+  },
   queryAddress(){
     wx.cloud.callFunction({
       name:'getUserInfo',
@@ -28,11 +34,15 @@ Page({
       console.log(length)
       let query={address:[]}
       for (let i=0;i<res.result.userData[0].address.length;i++){
-        query.address[i]=res.result.userData[0].address[i]
+        query.address[i]=JSON.parse(JSON.stringify(res.result.userData[0].address[i]));
       }
+      console.log('元数据',res.result.userData[0].address)
+      console.log('query:',query.address)
+      for (let i=0;i<query.address.length;i++){
+        query.address[i]=JSON.stringify(query.address[i])
+      }
+      query.openID=this.data.openID
       query.address=query.address.join('...')
-      //query.address=res.result.userData[0].address
-      console.log(query)
       router.gotoPage('/address',query)
     })
     .catch(err=>{

@@ -9,13 +9,24 @@ exports.main = async (event, context) => {
   const db = cloud.database()
   const _ = db.command
 
+  let address={
+    name:event.name,
+    phoneNumber:event.phoneNumber,
+    address:{
+      provinces:event.provinces,
+      area:event.area,
+      city:event.city,
+      detailed:event.detailed,
+    }
+  }
+
   
   await cloud.database().collection('user').where({
     id:event.openid
   })
   .update({
     data:{
-      'address' : _.push(event.address)
+      'address' : _.push(address)
     }
   })
   .then(res=>{
