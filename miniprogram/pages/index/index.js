@@ -1,7 +1,12 @@
 let openid
 let nickname
 let avatarUrl
+const app = getApp();
 Page({
+  data:{
+    CustomBar: app.globalData.CustomBar,
+    icon: [{ name: 'location', isShow: true },{name:'right'},{name:'unfold'}]
+  },
   onLoad(){
 
   },

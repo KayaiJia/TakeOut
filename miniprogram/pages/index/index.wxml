@@ -1,7 +1,15 @@
-<text>{{openid}}</text>
-<button bindtap="login">登录</button>
-<button bindtap="up">更新</button>
-<button bindtap="test">测试</button>
-<button bindtap="testinput">测试地址</button>
-<button bindtap="testM">测试商家</button>
-<button bindtap="testR">测试骑手</button>
+<text class="cuIcon-{{icon[0].name}} lg text-gray">定位<text class="cuIcon-{{icon[1].name}} lg text-gray"></text></text>
+
+  <searchBox class="searchBox"></searchBox>
+
+<view class="flex justify-around select">
+  <picker class="padding-sm margin-xs radius">速度<text class="cuIcon-{{icon[2].name}}"></text></picker>
+  <picker class="padding-sm margin-xs radius">分类<text class="cuIcon-{{icon[2].name}}"></text></picker>
+</view>
+
+<view>
+
+</view>
+
+<storeInformation></storeInformation>
+<storeInformation></storeInformation>

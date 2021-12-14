@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-
+    "storeInformation":"/components/storeInformation/storeInformation",
+    "searchBox" : "/components/searchBox/index"
   }
 }

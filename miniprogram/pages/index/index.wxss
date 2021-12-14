@@ -92,3 +92,21 @@ page {
   font-size: 24rpx;
   margin-top: 25%;
 }
+
+.select{
+  font-size: 14px;
+}
+
+.search{
+  width: 100vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-top: 6px solid white;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.searchBox{
+  margin: 0 auto;
+  margin-top: -15px;
+}

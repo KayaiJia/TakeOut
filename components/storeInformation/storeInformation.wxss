@@ -1,0 +1,63 @@
+/* components/storeInformation/storeInformation.wxss */
+@import "/main.wxss";
+@import "/icon.wxss";
+@import "/reset.wxss";
+.main{
+  margin: 0 auto;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 10px;
+  width: 95vw;
+  height: 20vh;
+  margin-bottom: 10px;
+}
+
+.pictrue-list{
+  /* background-color: tomato; */
+  width: 130px;
+  height: 130px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.pictrue{
+  max-height: 130px;
+  max-width: 130px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  object-fit:cover;
+
+  position: absolute;
+  left: 0; top: 0;
+}
+
+.information-list{
+  /* background-color: thistle; */
+  width: 600px;
+  height: 130px;
+  color:rgb(163, 163, 163);
+  margin-left: 80px;
+}
+
+.name{
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+.basic-information{
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+.score{
+  font-weight: bold;
+  font-size: 16px;
+  color: orange;
+  margin-right: 5px;
+}
+
+.price{
+  margin-right: 10px;
+}
