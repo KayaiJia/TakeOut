@@ -1,4 +1,6 @@
 /* miniprogram/pages/address/address.wxss */
+
+@import "../../../main.wxss";
 .adress-list{
   border-bottom: 1px solid rgb(246, 246, 246);
   margin: 0 auto;

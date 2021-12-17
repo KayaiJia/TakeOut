@@ -1,2 +1,15 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="main">
+  <view class="padding bg-white">
+    <view class="flex  p-xs margin-bottom-sm mb-sm adress-list bg-white" wx:for="{{order}}" wx:key>
+      <view class="flex-treble  padding-sm  radius flex flex-wrap">
+        <view class="basis-xl radius info name">店铺:{{item.name}} ¥{{item.price}}</view>
+        <view class="basis-xl  radius">地点:{{item.addressName}}</view>
+        <view class="basis-xl  radius">时间:{{item.time}}</view>
+        <view class="basis-xl  radius" wx:for="{{item.goods}}" wx:for-item="good" wx:for-index="number">菜品{{number+1}}:{{good.name}}</view>
+      </view>
+      <!-- <view class="flex-sub  margin-xs radius change cuIcon-{{icon[0].name}} lg text-gray"></view> -->
+    </view>
+
+    <view wx:if="{{!order}}" class="no">无订单</view>
+  </view>
+</view>

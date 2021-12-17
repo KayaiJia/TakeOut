@@ -67,7 +67,8 @@ Page({
         this.setData({
           openID:res.result.openid,
         })
-        if (res.result.info[0].name){
+        app.globalData.openid=res.result.openid
+        if (res.result.info[0]){
           this.setData({
             nickname:res.result.info[0].name,
             avatarUrl:res.result.info[0].icon,

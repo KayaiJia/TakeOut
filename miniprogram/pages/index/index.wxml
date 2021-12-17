@@ -1,15 +1,16 @@
-<text class="cuIcon-{{icon[0].name}} lg text-gray">定位<text class="cuIcon-{{icon[1].name}} lg text-gray"></text></text>
+<picker range="{{addName}}" range-key="name" bindchange="changeLocation"><text class="cuIcon-{{icon[0].name}} lg text-gray">{{addressName}}<text class="cuIcon-{{icon[1].name}} lg text-gray" bindtap="onChooseLocation"></text></text></picker>
 
-  <searchBox class="searchBox"></searchBox>
+  <searchBox class="searchBox" bind:returnKeyword="screening" bind:reduction="reduction"></searchBox>
 
-<view class="flex justify-around select">
+<!-- <view class="flex justify-around select">
   <picker class="padding-sm margin-xs radius">速度<text class="cuIcon-{{icon[2].name}}"></text></picker>
   <picker class="padding-sm margin-xs radius">分类<text class="cuIcon-{{icon[2].name}}"></text></picker>
-</view>
+</view> -->
 
 <view>
 
 </view>
 
-<storeInformation></storeInformation>
-<storeInformation></storeInformation>
+<storeInformation wx:for="{{storeList}}" list="{{item}}" wx:if="{{storeList[0].time}}" x="{{x}}" y="{{y}}" addressName="{{addressName}}" bindtap="details" data-src="{{index}}"></storeInformation>
+
+<!-- <storeInformation list="{{storeList[0]}}" x="{{x}}" y="{{y}}"></storeInformation> -->

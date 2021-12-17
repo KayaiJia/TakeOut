@@ -18,4 +18,14 @@ router.register({
     route:'/miniprogram/pages/collection/collection'
 })
 
+router.register({
+    path:'/goods',
+    route:'/miniprogram/pages/goods/goods'
+})
+
+router.register({
+    path:'/order',
+    route:'/miniprogram/pages/order/order'
+})
+
 export default router

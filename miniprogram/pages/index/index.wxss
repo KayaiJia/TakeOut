@@ -1,5 +1,5 @@
 /**index.wxss**/
-
+@import "../../../main.wxss";
 page {
   padding-top: 54rpx;
   background-color: #f6f6f6;
@@ -109,4 +109,5 @@ page {
 .searchBox{
   margin: 0 auto;
   margin-top: -15px;
+  margin-bottom: 10px;
 }

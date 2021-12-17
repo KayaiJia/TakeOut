@@ -1,18 +1,41 @@
 // pages/order/order.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    order:[],
+    CustomBar: app.globalData.CustomBar,
+    TabCur:0,
+    // icon:[{ name: 'write', isShow: true }],
+    openID:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      openID:app.globalData.openid
+    })
+    wx.cloud.callFunction({
+      name:'getUserInfo',
+      data:{
+        openid:this.data.openID
+      }
+    })
+    .then(res=>{
+      console.log('成功',res)
+      this.setData({
+        order:res.result.userData[0].order
+      })
+      console.log('订单',this.data.order)
+    })
+    .catch(err=>{
+      console.log('失败',err)
+    })
   },
 
   /**
@@ -26,7 +49,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.cloud.callFunction({
+      name:'getUserInfo',
+      data:{
+        openid:this.data.openID
+      }
+    })
+    .then(res=>{
+      console.log('成功',res)
+      this.setData({
+        order:res.result.userData[0].order
+      })
+      console.log('订单',this.data.order)
+    })
+    .catch(err=>{
+      console.log('失败',err)
+    })
   },
 
   /**

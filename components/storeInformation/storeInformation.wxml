@@ -2,18 +2,18 @@
 <!-- <text>components/storeInformation/storeInformation.wxml</text> -->
 <view class="flex align-center main">
   <view class="margin-xs radius pictrue-list">
-    <image alt="图片" class="pictrue" src="images/coco.jpeg"></image>
+    <image alt="图片" class="pictrue" src="{{list.image}}"></image>
   </view>
   <view class="padding-sm margin-xs radius information-list">
-    <view class="name">CoCo都可</view>
+    <view class="name">{{list.name}}</view>
 
     <view class="flex justify-between basic-information">
-      <view class="radius"><text class="score">4.9分</text><text class="sales">月售596</text></view>
-      <view class="radius distance">30分钟 1.2km</view>
+      <view class="radius"><text class="score">{{list.score}}分</text><text class="sales">月售{{list.sales}}</text></view>
+      <view class="radius distance">{{list.time}}分钟 {{list.distance}}km</view>
     </view>
 
     <view class="flex justify-between basic-information">
-      <view class="radius"><text class="price">起送¥15</text><text class="sales">配送¥0.2</text></view>
+      <view class="radius"><text class="price">起送¥{{list.upToSend}}</text><text class="sales">配送¥{{list.shippingFee}}</text></view>
     </view>
   </view>
 

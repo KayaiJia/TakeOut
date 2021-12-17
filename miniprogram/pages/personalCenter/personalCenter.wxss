@@ -69,6 +69,7 @@
   width: 50px;
   height: 50px;
 } */
+@import "../../../main.wxss";
 .vertical{
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const db = cloud.database()
   const _ = db.command
-
+  console.log('传入的东西',event)
   let address={
     name:event.name,
     phoneNumber:event.phoneNumber,
@@ -17,6 +17,8 @@ exports.main = async (event, context) => {
       area:event.area,
       city:event.city,
       detailed:event.detailed,
+      x:event.x,
+      y:event.y,
     }
   }
 
